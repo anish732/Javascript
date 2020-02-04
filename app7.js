@@ -26,4 +26,4 @@ function rot13(message) {
   return str;
 }
 
-rot13();
+rot13("hello");
