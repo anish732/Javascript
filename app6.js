@@ -10,12 +10,12 @@ function validate(password) {
   return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/.test(password);
 }
 
-console.log(validate("abcAVB1"));
+validate("abcAVB1");
 
 /**********************************************************************************************/
-
+/**Solution two you can add any character or it will even take 4 character long  */
 function validate(password) {
   return /[A-Z]+/.test(password);
 }
 
-console.log(validate("ac1A$"));
+validate("ac1A$");
