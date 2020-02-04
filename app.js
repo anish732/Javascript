@@ -38,11 +38,13 @@ function sumIntervals(intervals) {
   return arr.length;
 }
 
-sumIntervals([
-  [1, 4],
-  [7, 10],
-  [3, 5]
-]);
+console.log(
+  sumIntervals([
+    [1, 4],
+    [7, 10],
+    [3, 5]
+  ])
+);
 
 /********************************************************** */
 
