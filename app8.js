@@ -6,4 +6,26 @@ The function takes the parameter: n (n is always strictly greater than 0) and re
 removeNb(26), [[15,21], [21,15]]);
 removeNb(100), []);
 
-*/
+**************************************************************************************************/
+/**Solution 1 */
+
+const removNb = n => {
+  let sum = (n * (n + 1)) / 2;
+
+  for (var k = 1; k <= n; k++) {
+    for (var l = k + 1; l <= n; l++) {
+      if (k * l == sum - (k + l)) {
+        return [
+          [k, l],
+          [l, k]
+        ];
+      }
+    }
+  }
+  return [];
+};
+
+console.log(removNb(26));
+
+/*********************************************************************************************** */
+/**Solution 2 */
