@@ -27,5 +27,59 @@ const removNb = n => {
 
 console.log(removNb(26));
 
-/*********************************************************************************************** */
-/**Solution 2 */
+/*********************************************************************************************** /
+/**Solution 2 
+
+const removeNb = n => {
+  let sum = 0;
+  sum = (n * (n + 1)) / 2;
+  console.log(sum);
+  let a;
+
+  for (var k = 1; k <= n; k++) {
+    a = k;
+  }
+
+  let y = (sum - a) / (a + 1);
+
+  return [a, y];
+};
+
+console.log(removeNb(26));
+/****************************************************** 
+
+
+function checkPalindrome(inputString) {
+  let arr = inputString.split("");
+
+  let reverseArr = arr.reverse();
+  console.log(reverseArr);
+  let str = reverseArr.join("");
+  console.log(str);
+  if (inputString == str) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(checkPalindrome("aabc"));
+
+/*************************************************************************************** */
+
+function adjacentElementsProduct(inputArray) {
+  var x = 0;
+  var y = 0;
+  var p = Number.MIN_SAFE_INTEGER;
+
+  for (var i = 0; i < inputArray.length; i++) {
+    x = inputArray[i];
+    y = inputArray[i + 1];
+    if (x * y > p) {
+      p = x * y;
+    }
+  }
+  return p;
+}
+
+console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));
