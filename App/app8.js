@@ -46,24 +46,6 @@ const removeNb = n => {
 };
 
 console.log(removeNb(26));
-/****************************************************** 
-
-
-function checkPalindrome(inputString) {
-  let arr = inputString.split("");
-
-  let reverseArr = arr.reverse();
-  console.log(reverseArr);
-  let str = reverseArr.join("");
-  console.log(str);
-  if (inputString == str) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-console.log(checkPalindrome("aabc"));
 
 /*************************************************************************************** */
 
