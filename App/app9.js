@@ -8,10 +8,10 @@ For year = 1700, the output should be
 centuryFromYear(year) = 17. */
 
 function centuryFromYear(year) {
-  var abad = year / 100;
+  var century = year / 100;
   if (year % 100 == 0) {
-    return abad;
-  } else return parseInt(abad) + 1;
+    return century;
+  } else return parseInt(century) + 1;
 }
 
 console.log(centuryFromYear(2020));
