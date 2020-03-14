@@ -14,7 +14,9 @@ One   5   =>   50 point
 
 function score(dice) {
   var sum = 0;
-  dice = dice.sort();
+  dice = dice.sort(function(a, b) {
+    return a - b;
+  });
 
   for (var i = 0; i < dice.length; i++) {
     if (dice[i] == dice[i + 1] && dice[i + 1] == dice[i + 2]) {
