@@ -74,3 +74,36 @@ User.prototype.incProgress = function(rank) {
 
   return diff;
 };
+
+//********************************************************************************************************************************************************************** */
+
+function User() {
+  this.rank = -8;
+  this.progress = 0;
+  this.incProgress = function(askrank) {
+    if (askrank > 8 || askrank == 0 || askrank < -8) {
+      throw "error";
+    }
+    if (askrank == this.rank) {
+      this.progress += 3;
+    } else if (askrank > this.rank) {
+      if (askrank > 0 && this.rank < 0) {
+        this.progress += Math.pow(askrank - this.rank - 1, 2) * 10;
+      } else {
+        this.progress += Math.pow(askrank - this.rank, 2) * 10;
+      }
+    } else if (this.rank - askrank >= 2) {
+      this.progress += 1;
+    }
+    var add = Math.floor(this.progress / 100);
+    if (this.rank < 0 && this.rank + add >= 0) {
+      this.rank = this.rank + add + 1;
+    } else if (this.rank + add == 8) {
+      this.rank = 8;
+      this.progress = 0;
+    } else {
+      this.rank += add;
+    }
+    this.progress = this.progress % 100;
+  };
+}
